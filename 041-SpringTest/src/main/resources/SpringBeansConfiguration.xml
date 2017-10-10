@@ -4,5 +4,9 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans 
 	http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-
+	<bean id="gorevBean" class="com.mehmetucar.memur.Emniyet"/>
+	<bean id="memurBean" class="com.mehmetucar.memur.Polis">
+		<constructor-arg name="gorev" ref="gorevBean"/>
+	</bean>
+	
 </beans>
